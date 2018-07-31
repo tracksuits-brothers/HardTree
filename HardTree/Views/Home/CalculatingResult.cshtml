@@ -1,0 +1,34 @@
+﻿@using HardTree.Models
+
+@model CalculatingResult
+
+@{
+    ViewBag.Title = "CalculatingResult";
+}
+
+<h2>CalculatingResult</h2>
+@if (Model.TreesCount > 1)
+{
+    <h3>Общая стоимость валки деревьев:</h3>
+    <p>Количество деревьев: 
+    @Model.TreesCount
+    </p>
+}
+else
+{
+    <h3>Стоимость валки вашего дерева:</h3>
+}
+<p>Тип валки: 
+    @Model.ValkaTypeName
+</p>
+<p>Диаметр:
+    @Model.TreeDiameter
+</p>
+<p>
+    @Model.Price руб.
+</p>
+
+<button>
+    Заказать
+</button>
+

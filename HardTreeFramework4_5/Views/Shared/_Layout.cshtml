@@ -1,0 +1,83 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>@ViewBag.Title – приложение ASP.NET</title>
+    @Styles.Render("~/Content/css")
+    @Scripts.Render("~/bundles/modernizr")
+</head>
+<body>
+    <div class="navbar navbar-inverse navbar-fixed-top">
+        <div class="container">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                @Html.ActionLink("Имя приложения", "Index", "Home", new { area = "" }, new { @class = "navbar-brand" })
+            </div>
+            <div class="navbar-collapse collapse">
+                <ul class="nav navbar-nav">
+                    <li>@Html.ActionLink("Домашняя страница", "Index", "Home")</li>
+                    <li>@Html.ActionLink("О программе", "About", "Home")</li>
+                    <li>@Html.ActionLink("Контакт", "Contact", "Home")</li>
+                    <li>@Html.ActionLink("Калькулятор", "Calculate", "Home")</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <div class="container body-content">
+        @RenderBody()
+        <hr />
+        <footer>
+            <div class="footer">
+                <div class="wrapper">
+
+                    <div class="logo">
+                        <a href="hardtree.ru"><img src="img/header/logogo.png" alt=""></a>
+
+
+                    </div>
+                    <div class="contacts">
+                        <div class="phone">
+                            <a href="tel:+78129818052" class="number fright">981-80-52</a>
+
+                        </div>
+                        <div class="phone">
+                            <a href="tel:+78129265479" class="number fright">926-54-79</a>
+
+                        </div>
+
+
+                        <div class="email">
+                            <div class="email-text">zakaz@hardtree.ru</div>
+                            <img src="img/header/email.png" />
+
+                        </div>
+
+
+                    </div>
+                    <div class="description">Выбирайте профессионалов!</br><br><br>Адрес:&nbsp;м. Кировский завод, ул. Броневая 8 лит. Д<br></div>
+
+
+                    <div class="privacypolicy tac">
+
+                        <div class="conf-text tac">Присоединяйтесь к нашей команде, присылайте своё резюме на kadr@hardtree.ru</div>
+                    </div>
+
+
+                </div>
+
+
+            </div>
+        </footer>
+    </div>
+
+    @Scripts.Render("~/bundles/jquery")
+    @Scripts.Render("~/bundles/bootstrap")
+    @RenderSection("scripts", required: false)
+</body>
+</html>

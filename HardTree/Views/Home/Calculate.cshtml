@@ -1,0 +1,22 @@
+﻿@model SelectList
+@using HardTree.Models
+
+@{
+    ViewBag.Title = "Calculate";
+}
+
+<h2>Calculate</h2>
+
+<form method="post">
+    <label>Диаметр дерева: </label>
+    <input type="number"
+           name="treeDiameter" />
+    <label>Тип валки: </label>
+    @Html.DropDownList("typeId", Model)
+    <label>Количество деревьев: </label>
+    <input type="number"
+           name="treesCount" />
+
+    <input type="submit"
+           value="Рассчитать стоимость" />
+</form>

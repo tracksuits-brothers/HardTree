@@ -8,14 +8,22 @@
 <h2>Calculate</h2>
 
 <form method="post">
-    <label>Диаметр дерева: </label>
-    <input type="number"
-           name="treeDiameter" />
-    <label>Тип валки: </label>
-    @Html.DropDownList("typeId", Model)
-    <label>Количество деревьев: </label>
-    <input type="number"
-           name="treesCount" />
+    <p>
+        <label for="treeDiameter">Диаметр дерева: </label>
+        <input id="treeDiameter"
+               type="number"
+               name="treeDiameter" />
+    </p>
+    <p>
+        <label for="typeId">Тип валки: </label>
+        @Html.DropDownList("typeId", Model, htmlAttributes: "id=\"typeId\"")
+    </p>
+    <p>
+        <label for="treesCount">Количество деревьев: </label>
+        <input id="treesCount"
+               type="number"
+               name="treesCount" />
+    </p>
 
     <input type="submit"
            value="Рассчитать стоимость" />

@@ -16,7 +16,14 @@
     </p>
     <p>
         <label for="typeId">Тип валки: </label>
-        @Html.DropDownList("typeId", Model, htmlAttributes: "id=\"typeId\"")
+        @*@Html.DropDownList("typeId", Model, htmlAttributes: "id=\"typeId\"")*@
+        <select id="typeId"
+                name="typeId">
+            <option value="1">Спил целиком</option>
+            <option value="2">Спил с оттяжкой</option>
+            <option value="3">Спил частями</option>
+            <option value="4">Спил с завешиванием</option>
+        </select>
     </p>
     <p>
         <label for="treesCount">Количество деревьев: </label>

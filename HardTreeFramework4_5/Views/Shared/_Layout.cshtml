@@ -6,26 +6,24 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>@ViewBag.Title</title>
     @Styles.Render("~/Content/css")
-    @Scripts.Render("~/bundles/modernizr")
+    @*@Scripts.Render("~/bundles/modernizr")*@
 
 </head>
 <body>
-    <div class="navbar-collapse collapse">
-        <ul class="nav navbar-nav">
-            <li>@Html.ActionLink("Главная", "Index", "Home")</li>
-            <li>@Html.ActionLink("О компании", "About", "Home")</li>
-            <li>@Html.ActionLink("Контакты", "Contact", "Home")</li>
-            <li>@Html.ActionLink("Рассчитать стоимость валки", "Calculate", "Home")</li>
+    <div>
+        <ul class="header-menu">
+            <li><a href="/">Главная</a></li>
+            <li><a href="/Home/Calculate">Рассчитать стоимость валки</a></li>
         </ul>
     </div>
-    <div class="container body-content">
+    <div>
         @RenderBody()
         <hr />
         <footer>
             <div class="footer">
                 <div class="wrapper">
                     <div class="logo">
-                        <a href="/Home/Index"><img src="~/Images/logogo.png" alt=""></a>
+                        <a href="/"><img src="~/Images/logogo.png" alt=""></a>
                     </div>
                     <div class="contacts">
                         <div class="phone">
@@ -46,17 +44,13 @@
                     <div class="privacypolicy tac">
                         <div class="conf-text tac">Присоединяйтесь к нашей команде, присылайте своё резюме на kadr@hardtree.ru</div>
                     </div>
-
-
                 </div>
-
-
             </div>
         </footer>
     </div>
 
-    @Scripts.Render("~/bundles/jquery")
-    @Scripts.Render("~/bundles/bootstrap")
+    @*@Scripts.Render("~/bundles/jquery")
+    @Scripts.Render("~/bundles/bootstrap")*@
     @RenderSection("scripts", required: false)
 </body>
 </html>

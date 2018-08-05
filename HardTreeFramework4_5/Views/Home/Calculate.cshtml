@@ -8,30 +8,37 @@
 <h2>Calculate</h2>
 
 <form method="post">
-    <p>
-        <label for="treeDiameter">Диаметр дерева: </label>
-        <input id="treeDiameter"
-               type="number"
-               name="treeDiameter" />
-    </p>
-    <p>
-        <label for="typeId">Тип валки: </label>
-        @*@Html.DropDownList("typeId", Model, htmlAttributes: "id=\"typeId\"")*@
-        <select id="typeId"
-                name="typeId">
-            <option value="1">Спил целиком</option>
-            <option value="2">Спил с оттяжкой</option>
-            <option value="3">Спил частями</option>
-            <option value="4">Спил с завешиванием</option>
-        </select>
-    </p>
-    <p>
-        <label for="treesCount">Количество деревьев: </label>
-        <input id="treesCount"
-               type="number"
-               name="treesCount" />
-    </p>
+    <div class="calculator-form-control">
+        <p>
+            <label for="treeDiameter">Диаметр дерева:</label>
+            <input id="treeDiameter"
+                   type="number"
+                   name="treeDiameter" />
+        </p>
+    </div>
+    <div class="calculator-form-control">
+        <p>
+            <label for="typeId">Тип валки: </label>
+            @*@Html.DropDownList("typeId", Model, htmlAttributes: "id=\"typeId\"")*@
+            <select id="typeId"
+                    name="typeId">
+                <option value="1">Спил целиком</option>
+                <option value="2">Спил с оттяжкой</option>
+                <option value="3">Спил частями</option>
+                <option value="4">Спил с завешиванием</option>
+            </select>
+        </p>
+    </div>
+    <div class="calculator-form-control">
+        <p>
+            <label for="treesCount">Количество деревьев: </label>
+            <input id="treesCount"
+                   type="number"
+                   name="treesCount" />
+        </p>
+    </div>
 
     <input type="submit"
-           value="Рассчитать стоимость" />
+           value="Рассчитать стоимость"
+           class="calculator-form-submit"/>
 </form>

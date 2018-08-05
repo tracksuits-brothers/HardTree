@@ -36,7 +36,6 @@ namespace HardTree.Controllers
             if (treeDiameter == null || typeId == null || treesCount == null)
                 return new HttpStatusCodeResult(HttpStatusCode.BadRequest, "Parameters cannot be null");
 
-
             if (treeDiameter < 0 || typeId < 0 || treesCount < 0)
                 return new HttpStatusCodeResult(HttpStatusCode.BadRequest, "Parameters cannot be negative numbers");
 

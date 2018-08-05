@@ -1,12 +1,12 @@
 ﻿body {
-    background-color: #bbffbb;
+    background-color: #ddffdd;
 }
 
 .header-menu {
-    background-color: #2ecc71;
-    border: 1px solid #27ae60;
+    background-color: #4edc91;
+    border: 1px solid #47be80;
     border-left-width: 10px;
-    border-radius: 12px;
+    border-radius: 8px;
     margin: 0;
 }
 
@@ -31,4 +31,19 @@
 
 .header-menu > li > a:hover {
     color: #cefc61;
+}
+
+.calculator-form-control {
+    display: inline-block;
+    padding-left: 10px;
+}
+
+.calculator-form-submit {
+    display: block;
+    padding: 10px;
+    margin: 5px;
+    background-color: #47be80;
+    border: 1px solid #4edc91;
+    border-radius: 5px;
+    box-shadow: 5px 5px 5px #ddffdd;
 }
